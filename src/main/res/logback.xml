@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="fileAppenderApplication"
+		class="ch.qos.logback.core.FileAppender">
+		<file>${catalina.base}/logs/urlshortener/app.log</file>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="fileAppenderDependencies"
+		class="ch.qos.logback.core.FileAppender">
+		<file>${catalina.base}/logs/urlshortener/dependencies.log</file>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="com.example.shortener" level="debug"
+		additivity="false">
+		<appender-ref ref="fileAppenderApplication" />
+	</logger>
+
+	<logger name="org.springframework" level="debug"
+		additivity="false">
+		<appender-ref ref="fileAppenderDependencies" />
+	</logger>
+
+	<logger name="org.hibernate" level="debug" additivity="false">
+		<appender-ref ref="fileAppenderDependencies" />
+	</logger>
+
+	<root level="debug">
+		<appender-ref ref="fileAppenderDependencies" />
+	</root>
+</configuration>

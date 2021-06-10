@@ -1,0 +1,36 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" href="../styles/home.css">
+    <script src="../js/home.js"></script>
+    <title>Short.ly</title>
+</head>
+<body>
+<script>
+    document.addEventListener("DOMContentLoaded", initDOM);
+</script>
+<div class="main">
+    <!--<div class="row">
+        <div class="col-1-2">
+            <span class="attractive-text">Short.ly</span>
+        </div>
+        <div class="col-1-2" id="auth-panel">
+            <div id="panel-anonymous">
+                <input type="button" value="Login" class="button" onclick="login()">
+                <input type="button" value="Sign Up" class="button" onclick="signUp()">
+            </div>
+            <div id="panel-registered">
+                <input type="button" value="Log out" class="button" onclick="logOut()">
+            </div>
+        </div>
+    </div>-->
+    <div class="row">
+        <input type="text" id="original-link-input"
+               placeholder="Enter a long URL to make a Short.ly link">
+        <input type="button" value="Shorten" class="button" onclick="generateShortLink()">
+    </div>
+    <div class="row">
+        <span id="short-link-result"></span>
+    </div>
+</div>
+</body>
+</html>
