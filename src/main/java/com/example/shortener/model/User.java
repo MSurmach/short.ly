@@ -1,5 +1,7 @@
 package com.example.shortener.model;
 
+import com.example.shortener.jsonViews.UserView;
+import com.fasterxml.jackson.annotation.JsonView;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -10,9 +12,7 @@ import java.util.List;
 @Data
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    @Column
+    @JsonView(UserView.UserLoginView.class)
     private String login;
     @Column
     private String password;
