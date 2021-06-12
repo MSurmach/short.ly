@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+    <script src="../js/signup.js"></script>
+</head>
+<body>
+<div class="container">
+    <form>
+        <label for="login-input">Login</label>
+        <input type="text" id="login-input">
+        <label for="password-input">Password</label>
+        <input type="password" id="password-input" onkeyup="isMatched()">
+        <label for="confirm-password-input">Confirm password</label>
+        <input type="password" id="confirm-password-input" onkeyup="isMatched()">
+        <span id="match-message"></span>
+        <input type="button" value="Sign up" class="button" onclick="signUp()">
+        <input type="button" value="Cancel" class="button" onclick="">
+    </form>
+</div>
+</body>
+</html>
