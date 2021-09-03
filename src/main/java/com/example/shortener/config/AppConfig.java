@@ -5,7 +5,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 public class AppConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
-		return new Class[] {HibernateConfig.class};
+        return new Class[]{SecurityConfig.class, HibernateConfig.class};
     }
 
     @Override

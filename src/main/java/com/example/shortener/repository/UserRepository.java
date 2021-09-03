@@ -2,8 +2,8 @@ package com.example.shortener.repository;
 
 import com.example.shortener.model.User;
 
-public interface UserRepository {
-    User findUserByLogin(String login);
+import java.util.Optional;
 
-    void persist(User user);
+public interface UserRepository extends CrudRepository<User> {
+    Optional<User> findUserByUsername(String username);
 }

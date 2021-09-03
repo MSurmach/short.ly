@@ -2,7 +2,6 @@ package com.example.shortener.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
@@ -14,10 +13,9 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@ComponentScan(basePackages = "com.example.shortener")
 @PropertySource(value = "classpath:base.properties")
-
 public class HibernateConfig {
+
     private Environment environment;
 
     @Autowired
@@ -28,7 +26,9 @@ public class HibernateConfig {
     private Properties hibernateProperties() {
         Properties hibernateProperties = new Properties();
         hibernateProperties.put("hibernate.show_sql", environment.getRequiredProperty("hibernate.show_sql"));
-        hibernateProperties.put("hibernate.hbm2ddl.auto", environment.getRequiredProperty("hibernate.hbm2ddl.auto"));
+        //hibernateProperties.put("hibernate.hbm2ddl.auto", environment.getRequiredProperty("hibernate.hbm2ddl.auto"));
+        hibernateProperties.put("hibernate.dialect", environment.getRequiredProperty("hibernate.dialect"));
+
         return hibernateProperties;
     }
 

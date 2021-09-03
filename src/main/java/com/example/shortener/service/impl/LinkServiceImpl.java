@@ -1,8 +1,8 @@
 package com.example.shortener.service.impl;
 
 import com.example.shortener.model.Link;
-import com.example.shortener.repository.ShortenerRepository;
-import com.example.shortener.service.ShortenerService;
+import com.example.shortener.repository.LinkRepository;
+import com.example.shortener.service.LinkService;
 import com.example.shortener.utils.SequenceGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,12 +11,12 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-public class ShortenerServiceImpl implements ShortenerService {
-    private ShortenerRepository shortenerRepository;
+public class LinkServiceImpl implements LinkService {
+    private LinkRepository linkRepository;
 
     @Autowired
-    public void setShortenerRepository(ShortenerRepository shortenerRepository) {
-        this.shortenerRepository = shortenerRepository;
+    public void setShortenerRepository(LinkRepository linkRepository) {
+        this.linkRepository = linkRepository;
     }
 
     @Override
@@ -28,24 +28,30 @@ public class ShortenerServiceImpl implements ShortenerService {
     @Override
     @Transactional
     public Link getLinkByShortName(String shortName) {
-        return shortenerRepository.getLinkByShortName(shortName);
+        return linkRepository.getLinkByShortName(shortName);
     }
 
     @Override
     @Transactional
-    public void createLink(Link link) {
-        shortenerRepository.create(link);
+    public void create(Link link) {
+        linkRepository.create(link);
     }
 
     @Override
     @Transactional
-    public void updateLink(Link link) {
-        shortenerRepository.update(link);
+    public void update(Link link) {
+        linkRepository.update(link);
+    }
+
+    @Override
+    @Transactional
+    public void delete(Link link) {
+        linkRepository.delete(link);
     }
 
     @Override
     @Transactional
     public List<Link> getListOfLinks(int page, int count) {
-        return shortenerRepository.getListOfLinks(page,count);
+        return linkRepository.getListOfLinks(page, count);
     }
 }

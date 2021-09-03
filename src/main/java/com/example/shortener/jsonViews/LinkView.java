@@ -10,4 +10,7 @@ public class LinkView {
 
     public interface SummaryInfo {
     }
+
+    public interface RenamingLinkInfo {
+    }
 }

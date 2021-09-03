@@ -1,6 +1,6 @@
 body {
     background-color: #374b5e;
-    font-family: Consolas, monospace;
+    font-family: Arial, monospace;
 }
 
 .col-1-2 {
@@ -8,13 +8,37 @@ body {
     float: left;
 }
 
-.row {
+#panel-anonymous, #panel-registered, .controls {
+    text-align: right;
+}
+
+#main-input-form {
+    padding: 50px;
     text-align: center;
-    width: 100%;
-    max-width: 1024px;
+}
+
+#all-user-link-place {
+    background-color: #1a252d;
+    border: 2px solid #f6c156;
+}
+
+#short-link-place {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.card {
+    width: auto;
+    min-height: 50px;
     background-color: #5b7995;
-    margin-bottom: 30px;
-    border-radius: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.row {
+    margin-bottom: 10px;
 }
 
 .row:after {
@@ -29,40 +53,71 @@ body {
     padding: 10px;
 }
 
-a {
+.small-attractive-text {
+    color: #f6c156;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.pagination {
+    text-align: center;
+}
+
+#short-link-result a, #record-count, .pagination a, .attractive-link {
+    font-size: 20px;
     color: #384350;
     text-decoration: none;
     background-color: #f6c156;
-    border: #f6c156;
-    border-radius: 4px;
-    padding: 10px 20px;
+    border-radius: 10px;
+    padding: 10px;
 }
 
-#link-input {
-    width: 60%;
-    background-color: #374b5e;
-    height: 50px;
+.short-link-decoration {
+    font-size: 16px;
+    color: #384350;
+    text-decoration: none;
+    background-color: #f6c156;
     border-radius: 4px;
-    border: 2px solid #1a252d;
+    padding: 10px;
 }
+
 
 .button {
     background-color: #1a252d;
-    border: none;
     color: #f6c156;
     cursor: pointer;
     padding: 10px;
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     border-radius: 10px;
     font-size: 20px;
+    height: 40px;
+    border: none;
 }
 
-input::placeholder {
+#original-link-input::placeholder {
     color: #a59472;
     font-size: 20px;
 }
 
-input {
-    color: black;
+#original-link-input {
+    width: auto;
+    min-width: 90%;
+    background-color: #1a252d;
+    height: 40px;
+    border-radius: 2px;
+    border: 2px solid #1a252d;
+    color: #f3e8cc;
     font-size: 20px;
 }
+
+.rename-input {
+    width: 100px;
+    background-color: #1a252d;
+    height: 40px;
+    border-radius: 2px;
+    border: 2px solid #1a252d;
+    color: #f6c156;
+    font-size: 20px;
+}
+

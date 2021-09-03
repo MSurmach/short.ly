@@ -23,10 +23,10 @@
 		<appender-ref ref="fileAppenderApplication" />
 	</logger>
 
-	<logger name="org.springframework" level="debug"
+	<!--<logger name="org.springframework" level="debug"
 		additivity="false">
 		<appender-ref ref="fileAppenderDependencies" />
-	</logger>
+	</logger>-->
 
 	<logger name="org.hibernate" level="debug" additivity="false">
 		<appender-ref ref="fileAppenderDependencies" />

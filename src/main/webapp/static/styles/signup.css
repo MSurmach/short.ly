@@ -1,0 +1,48 @@
+body {
+    background-color: #374b5e;
+    font-family: Consolas, monospace;
+}
+
+.centered {
+    text-align: center;
+}
+
+#match-message {
+    background-color: #1a252d;
+    text-align: center;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.attractive-text {
+    color: #f6c156;
+    font-size: 40px;
+}
+
+input {
+    color: #f6c156;
+    font-size: 25px;
+    width: 50%;
+    background-color: #1a252d;
+    height: 50px;
+    border-radius: 4px;
+    border: 2px solid #1a252d;
+    margin: 10px;
+}
+
+.button {
+    cursor: pointer;
+}
+
+#signup-form {
+    width: 40%;
+    text-align: center;
+    background-color: #5b7995;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+#head-line {
+    margin-bottom: 30px;
+}
